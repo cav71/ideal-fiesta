@@ -1,17 +1,15 @@
-<footer class="post-info" style="border: solid black 2px;">
-    11
-        <abbr class="published" title="{{ article.date.isoformat() }}">
-                Published: {{ article.locale_date }}
-        </abbr>
-    22
-        {% if article.modified %}
-        <br />
-        <abbr class="modified" title="{{ article.modified.isoformat() }}">
-                Updated: {{ article.locale_modified }}
-        </abbr>
-        {% endif %}
+<dl>
+  <dt>Published:</dt>
+  <dd>{{ article.locale_date }}</dd>
 
-    33
+  {% if article.modified %}
+  <dt>Updated:</dt>
+  <dd>{{ article.locale_modified }}</dd>
+  {% endif %}
+
+
+</dl>
+<!--
         {% if article.authors %}
         <address class="vcard author">
                 By {% for author in article.authors %}
@@ -23,4 +21,5 @@
 {% include 'taglist.html' %}
 {% import 'translations.html' as translations with context %}
 {{ translations.translations_for(article) }}
-</footer><!-- /.post-info -->
+</footer>
+-->
